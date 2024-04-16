@@ -21,7 +21,8 @@ to the destination folder of your
 
 # Execution
 For ease of use create a .bat file and add 
-`python3 "path\to\flusher.py"
-pause`
+`python3 "path\to\flusher.py"`
+
+`pause`
    
 simply double click to run this program
