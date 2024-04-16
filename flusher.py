@@ -15,8 +15,10 @@ desktopList = []
 files_and_dirs = os.listdir(directory)
 
 # you can change the file types here
-fileTypeListForDocs = ["*.pdf", "*.docx", "*.xlsx", "*.pptx"]
-fileTypeListForImages = ["*.jpg", "*.png", "*.jpeg"]
+fileTypeLists = {
+    dst_folder_pdfs: ["*.pdf", "*.docx", "*.xlsx", "*.pptx"],
+    dst_folder_images: ["*.jpg", "*.png", "*.jpeg"],
+}
 
 
 def moveFiles(fileType, destination):
@@ -26,7 +28,7 @@ def moveFiles(fileType, destination):
         print("Moved:", file)
 
 
-def assignAndMoveFiles(fileTypeList, destination):
+def assignAndMoveFiles(destination, fileTypeList):
     for fileType in fileTypeList:
         typeList = []
         typeList.append(glob.glob(os.path.join(directory, fileType)))
@@ -34,8 +36,8 @@ def assignAndMoveFiles(fileTypeList, destination):
             moveFiles(type, destination)
 
 
-assignAndMoveFiles(fileTypeListForDocs, dst_folder_pdfs)
-assignAndMoveFiles(fileTypeListForImages, dst_folder_images)
+for key, value in fileTypeLists.items():
+    assignAndMoveFiles(key, value)
 
 
 def updateDesktopList():
