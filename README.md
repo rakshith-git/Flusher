@@ -30,4 +30,4 @@ python3 "path\to\flusher.py"
 pause
 ```
 
-simply double click to run this program
+save it as .bat and simply double click the bat file to run this program
