@@ -1,11 +1,14 @@
 # Flusher
+
 Should be pretty easy to use just change 
 `directory = "C:/Users/win10/Desktop"`
+
 to your desktop directory and
 
-`dst_folder_pdfs = "C:/Users/win10/Desktop/pdfs"
-dst_folder_images = "C:/Users/win10/Desktop/images"`
-
+```
+dst_folder_pdfs = "C:/Users/win10/Desktop/pdfs"
+dst_folder_images = "C:/Users/win10/Desktop/images"
+```
 to the destination folder of your 
 
 ## documents which includes
@@ -21,8 +24,10 @@ to the destination folder of your
 
 # Execution
 For ease of use create a .bat file and add 
-`python3 "path\to\flusher.py"`
 
-`pause`
-   
+```
+python3 "path\to\flusher.py"
+pause
+```
+
 simply double click to run this program
